@@ -3,10 +3,24 @@
 #include "Utility.h"
 #include "Skybox.h"
 #include "SolidSphere.h"
+#include "SomePlanet.h"
+
+void init();
+void display();
+void reshape(int w, int h);
+void idleDisplay();
+
+const static int FPS = 30;
 
 Camera* mCamera = new Camera(0.0, 2.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
 Skybox* skybox = new Skybox();
-SolidSphere* sphere = new SolidSphere(2.0f, 12, 40);
+SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
+SomePlanet* somePlanet = new SomePlanet();
+
+int SolidSphere::ANGLE = 1;
+int SomePlanet::Angle = 1;
+int preTime = 0;
+int curTime = 0;
 
 void init() {
 	glShadeModel(GL_SMOOTH);
@@ -20,7 +34,19 @@ void init() {
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
 	skybox->initTexture();
+	preTime = glutGet(GLUT_ELAPSED_TIME);
 }
+
+void idleDisplay() {
+	preTime = glutGet(GLUT_ELAPSED_TIME);
+	display();
+	curTime = glutGet(GLUT_ELAPSED_TIME);
+	while ((curTime - preTime) * FPS - 1000 < 0) {
+		curTime = glutGet(GLUT_ELAPSED_TIME);
+	}
+	preTime = curTime;
+	glutPostRedisplay();
+}	
 
 void drawGrid()
 {
@@ -43,11 +69,11 @@ void display() {
 	mCamera->setCamera();
 	drawGrid();
 	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
-
+/*
 	sphere->draw(4, 2, 8);
 	sphere->draw(-2, 2, 6);
-	sphere->draw(4, 2, -8);
-	
+	sphere->draw(4, 2, -8);*/
+	somePlanet->draw(10, 2, 8);
 	glFlush();
 }
 
@@ -78,6 +104,7 @@ int main(int argc, char** argv) {
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutPassiveMotionFunc(moveSenceByMouseMotion);
+	glutIdleFunc(idleDisplay);
 	glutMainLoop();
 	return 0;
 }

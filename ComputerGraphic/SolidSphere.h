@@ -1,3 +1,6 @@
+#ifndef _SOLIDSPHERE_H_
+#define _SOLIDSPHERE_H_
+
 #include <windows.h>
 #include <vector>
 #include <gl/glut.h>
@@ -15,6 +18,9 @@ protected:
 	std::vector<GLushort> indices;
 
 public:
+	SolidSphere() {
+		SolidSphere(2, 20, 20);
+	}
 	SolidSphere(float radius, unsigned int rings, unsigned int sectors)
 	{
 		float const R = 1. / (float)(rings - 1);
@@ -53,13 +59,15 @@ public:
 			*i++ = (r + 1) * sectors + s;
 		}
 	}
-
+	static int ANGLE;
 	void draw(GLfloat x, GLfloat y, GLfloat z)
 	{
 		glMatrixMode(GL_MODELVIEW);
 		glPushMatrix();
 		glTranslatef(x, y, z);
-
+		if (ANGLE > 360) ANGLE -= 360;
+		glRotatef(ANGLE, 0.0, 0.8, 0.0);
+		ANGLE += 1;
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_NORMAL_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -71,3 +79,4 @@ public:
 		glPopMatrix();
 	}
 };
+#endif

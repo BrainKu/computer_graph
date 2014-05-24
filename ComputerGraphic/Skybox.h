@@ -14,7 +14,7 @@
 
 class Skybox {
 public:
-	const static int SKYBOX_TEXTURE_COUNT = 6;
+	static const int SKYBOX_TEXTURE_COUNT = 6;
 	void drawSkyBox(float x, float y, float z, float width, float height, float length);
 	void initTexture();
 private:

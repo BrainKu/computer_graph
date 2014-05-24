@@ -20,7 +20,7 @@ void Camera::setCameraScreenSize(int width, int height) {
 	mSceneWidth = width;
 	mSceneHeight = height;
 }
-void Camera::moveByKeyPressed() {
+void Camera::moveByKeyPressed(UINT key, int x, int y) {
 }
 
 void Camera::rotateView(float x, float y, float z) {

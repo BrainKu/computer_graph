@@ -25,7 +25,7 @@ public:
 	void setCamera();
 	void setCameraScreenSize(int width, int height);
 	void moveByMouseMove(int x, int y);
-	void moveByKeyPressed();
+	void moveByKeyPressed(UINT key, int x, int y);
 	void rotateView(float x, float y, float z);
 };
 
