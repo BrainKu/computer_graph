@@ -15,7 +15,7 @@ const static int FPS = 30;
 int SomePlanet::Angle = 1;
 Camera* mCamera = new Camera(0.0, 2.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
 Skybox* skybox = new Skybox();
-SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
+//SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
 SomePlanet* somePlanet = new SomePlanet();
 
 int preTime = 0;
@@ -24,7 +24,6 @@ int curTime = 0;
 void init() {
 	glShadeModel(GL_SMOOTH);
 	glClearColor(0.5, 0.5, 0.5, 0.0);
-	//glClearColor(0.5, 1.0, 1.0, 0.0);
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
@@ -42,7 +41,7 @@ void init() {
 	glEnable(GL_LIGHT0);
 
 	skybox->initTexture();
-	sphere->init();
+	somePlanet->init();
 }
 
 void idleDisplay() {
@@ -75,14 +74,10 @@ void display() {
 
 	glLoadIdentity();
 	mCamera->setCamera();
-	//drawGrid();
-	skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
+	drawGrid();
+	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
 
-	//sphere->draw(4, 2, 8);
-	//sphere->draw(-2, 2, 6);
-	//sphere->draw(4, 2, -8);
-	sphere->draw(4.0, 2.0, -8.0);
-	//somePlanet->draw(10, 2, 8);
+	somePlanet->draw(0, 2.0, 0);
 	glFlush();
 }
 

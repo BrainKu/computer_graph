@@ -18,10 +18,10 @@ protected:
 	std::vector<GLfloat> texcoords;
 	std::vector<GLushort> indices;
 private:
-	GLuint tetureName;
 public:
+	GLuint tetureName;
 	static int ANGLE;
-	SolidSphere();
+	//SolidSphere();
 	SolidSphere(float radius, unsigned int rings, unsigned int sectors);
 	void draw(GLfloat x, GLfloat y, GLfloat z);
 	void init();

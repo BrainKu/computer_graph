@@ -1,31 +1,41 @@
 #ifndef _SOMEPLANET_H_
 #define _SOMEPLANET_H_
 
+#include "SolidSphere.h"
 #include <windows.h>
 #include <gl/glut.h>
-#include "SolidSphere.h"
+#include <vector>
 
 class SomePlanet {
 public:
 	SomePlanet(){
 		for (int i = 0; i < 5; i++) {
-			sphereList[i] = SolidSphere(2, 20, 20);
-			sphereList[i].init();
+			planets.push_back(SolidSphere(2, 20, 20));
+		}
+	};
+	void init() {
+		std::vector<SolidSphere>::iterator i;
+		for (i = planets.begin(); i != planets.end(); i++) {
+			i->init();
 		}
 	};
 	void draw(float x, float y, float z) {
 		glMatrixMode(GL_MODELVIEW);
 		glPushMatrix();
 		glTranslatef(x, y, z);
-		glRotatef(Angle, 0.0, 1.0, 0.0);
-		for (int i = 0; i < 5; i++) {
-			sphereList[i].draw(i * 2, 2, 5 * i - 2);
+		std::vector<SolidSphere>::iterator i;
+		int count = 1;
+		glRotatef(count, 0.0, 1.0, 0.0);
+		for ( i = planets.begin(); i != planets.end();i++) {
+			i->draw(8 * count, 1 , 10);
+			count++;
 		}
+
 		Angle += 1;
 		glPopMatrix();
 	};
 private:
-	SolidSphere sphereList[5];
+	std::vector<SolidSphere> planets;
 	static int Angle;
 };
 #endif
