@@ -1,5 +1,4 @@
 //#include <GL/glut.h>
-//#include <glaux.h>
 //#include <gl/GL.h>
 //
 //void init();
@@ -46,4 +45,5 @@
 //	glutReshapeFunc(reshape);
 //	glutMainLoop();
 //	return 0;
+//
 //}

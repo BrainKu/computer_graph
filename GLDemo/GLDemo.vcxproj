@@ -79,16 +79,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\ComputerGraphic\glauxTestcpp.cpp" />
-    <ClCompile Include="..\ComputerGraphic\Half-edge.cpp" />
-    <ClCompile Include="..\ComputerGraphic\LightShading.cpp" />
-    <ClCompile Include="..\ComputerGraphic\ReadObjAndTexture.cpp" />
-    <ClCompile Include="..\ComputerGraphic\RedBookExample_Mapping.cpp" />
-    <ClCompile Include="..\ComputerGraphic\TextureTest.cpp" />
+    <ClCompile Include="glauxTestcpp.cpp" />
     <ClCompile Include="GlMultipleMapping.cpp" />
+    <ClCompile Include="Half-edge.cpp" />
+    <ClCompile Include="Half_Edge.cpp" />
+    <ClCompile Include="LightShading.cpp" />
+    <ClCompile Include="Obj3dmodel.cpp" />
+    <ClCompile Include="ReadObjAndTexture.cpp" />
+    <ClCompile Include="RedBookExample_Mapping.cpp" />
+    <ClCompile Include="TextureTest.cpp" />
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Obj3dmodel.h" />
     <ClInclude Include="Utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

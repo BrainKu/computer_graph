@@ -30,8 +30,8 @@
     <ClCompile Include="Planet.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SolidSphere.h">
-      <Filter>头文件</Filter>
+    <ClCompile Include="SolidSphere.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SomePlanet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SolidSphere.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
