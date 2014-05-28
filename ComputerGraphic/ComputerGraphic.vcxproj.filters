@@ -36,6 +36,9 @@
     <ClCompile Include="SolidSphere.cpp">
       <Filter>源文件\Planet</Filter>
     </ClCompile>
+    <ClCompile Include="Scence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="SolidSphere.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scence.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

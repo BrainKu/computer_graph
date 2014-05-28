@@ -85,6 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Scence.cpp" />
     <ClCompile Include="SolidSphere.cpp" />
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Skybox.cpp" />
@@ -95,6 +96,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Planet.h" />
+    <ClInclude Include="Scence.h" />
     <ClInclude Include="Skybox.h" />
     <ClInclude Include="SolidSphere.h" />
     <ClInclude Include="SomePlanet.h" />

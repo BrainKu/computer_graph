@@ -14,9 +14,10 @@
 
 class Skybox {
 public:
+	Skybox(){};
 	static const int SKYBOX_TEXTURE_COUNT = 6;
 	void drawSkyBox(float x, float y, float z, float width, float height, float length);
-	void initTexture();
+	void init();
 private:
 	GLuint texArray[SKYBOX_TEXTURE_COUNT];
 	static const char* skyFilename[SKYBOX_TEXTURE_COUNT];

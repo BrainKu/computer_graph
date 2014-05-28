@@ -5,6 +5,7 @@
 #include "SolidSphere.h"
 #include "SomePlanet.h"
 #include "Planet.h"
+#include "Scence.h"
 
 void init();
 void display();
@@ -13,12 +14,10 @@ void idleDisplay();
 
 const static int FPS = 30;
 
-int SomePlanet::Angle = 1;
 Camera* mCamera = new Camera(0.0, 1.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
 Skybox* skybox = new Skybox();
-//SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
-SomePlanet* somePlanet = new SomePlanet();
 Planet* aPlanet = new Planet(1.0f);
+Scence* scence = new Scence();
 
 int preTime = 0;
 int curTime = 0;
@@ -37,14 +36,13 @@ void init() {
 
 	GLfloat lightPosition[] = { 2.0, 3.0, 1.0, 0.0 };
 	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-	//glLightfv(GL_LIGHT0, GL_DIFFUSE, lightPosition);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 
-	skybox->initTexture();
-	somePlanet->init();
-	aPlanet->init();
+	scence->init();
+	//skybox->initTexture();
+	//aPlanet->init();
 }
 
 void idleDisplay() {
@@ -79,8 +77,8 @@ void display() {
 	mCamera->setCamera();
 	//drawGrid();
 	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
-	aPlanet->draw(0, 2.0, 0);
-	//somePlanet->draw(0, 2.0, 0);
+	//aPlanet->draw(0, 2.0, 0);
+	scence->draw(0, 0, 0);
 	glFlush();
 }
 

@@ -16,7 +16,7 @@ public:
 	void init() {
 		std::vector<SolidSphere>::iterator i;
 		for (i = planets.begin(); i != planets.end(); i++) {
-			i->init();
+			i->init();	
 		}
 	};
 	void draw(float x, float y, float z) {

@@ -55,7 +55,7 @@ void Skybox::drawSkyBox(float x, float y, float z, float width, float height, fl
 	glEnd();
 }
 
-void Skybox::initTexture() {
+void Skybox::init() {
 	Utility::loadBmps2TexArray(texArray, skyFilename, SKYBOX_TEXTURE_COUNT);
 };
 

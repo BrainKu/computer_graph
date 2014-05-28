@@ -14,9 +14,9 @@ public :
 	Planet(float size);
 	void draw(float x, float y, float z);
 	void init();
+	float revolutionSpeed;
 protected:
 	float rotationalSpeed;
-	float revolutionSpeed;
 	const char* filepath;
 	float size;
 	GLuint textureName;
