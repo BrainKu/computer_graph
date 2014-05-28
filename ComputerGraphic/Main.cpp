@@ -13,7 +13,7 @@ void idleDisplay();
 const static int FPS = 30;
 
 int SomePlanet::Angle = 1;
-Camera* mCamera = new Camera(0.0, 2.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
+Camera* mCamera = new Camera(0.0, 1.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
 Skybox* skybox = new Skybox();
 //SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
 SomePlanet* somePlanet = new SomePlanet();
@@ -74,8 +74,8 @@ void display() {
 
 	glLoadIdentity();
 	mCamera->setCamera();
-	drawGrid();
-	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
+	//drawGrid();
+	skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
 
 	somePlanet->draw(0, 2.0, 0);
 	glFlush();

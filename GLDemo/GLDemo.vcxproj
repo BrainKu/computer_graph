@@ -53,12 +53,16 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -87,6 +91,7 @@
     <ClCompile Include="Obj3dmodel.cpp" />
     <ClCompile Include="ReadObjAndTexture.cpp" />
     <ClCompile Include="RedBookExample_Mapping.cpp" />
+    <ClCompile Include="Reference.cpp" />
     <ClCompile Include="TextureTest.cpp" />
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>

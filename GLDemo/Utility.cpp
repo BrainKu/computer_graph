@@ -1,26 +1,26 @@
-//#include "Utility.h"
-//
-///************************************************************************/
-///* Load multiple BMP texture                                                                     */
-///************************************************************************/
-//void Utility::loadBmps2TexArray(GLuint textureArray[], const char** fileArray, GLuint idArray[], int size) {
-//}
-//
-///************************************************************************/
-///* load single BMP texture                                                                     */
-///************************************************************************/
-//void Utility::loadSingleTex(GLuint texname, const char* filename) {
-//	if (NULL == filename) return;
-//	WCHAR temp[100];
-//	int length = strlen(filename) + 1;
-//	MultiByteToWideChar(0, 0, filename, length, temp, length);
-//	AUX_RGBImageRec* imageRec = auxDIBImageLoad(temp);
-//	if (NULL == imageRec) return;
-//
-//	glGenTextures(1, &texname);
-//	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-//	glBindTexture(GL_TEXTURE_2D, texname);
-//	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, imageRec->sizeX, imageRec->sizeY, GL_RGB, GL_UNSIGNED_BYTE, imageRec->data);
-//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-//}
+#include "Utility.h"
+
+/************************************************************************/
+/* load multiple bmp texture                                                                     */
+/************************************************************************/
+void Utility::loadbmps2texarray(gluint texturearray[], const char** filearray, gluint idarray[], int size) {
+}
+
+/************************************************************************/
+/* load single bmp texture                                                                     */
+/************************************************************************/
+void utility::loadsingletex(gluint texname, const char* filename) {
+	if (null == filename) return;
+	wchar temp[100];
+	int length = strlen(filename) + 1;
+	multibytetowidechar(0, 0, filename, length, temp, length);
+	aux_rgbimagerec* imagerec = auxdibimageload(temp);
+	if (null == imagerec) return;
+
+	glgentextures(1, &texname);
+	glpixelstorei(gl_unpack_alignment, 1);
+	glbindtexture(gl_texture_2d, texname);
+	glubuild2dmipmaps(gl_texture_2d, 3, imagerec->sizex, imagerec->sizey, gl_rgb, gl_unsigned_byte, imagerec->data);
+	gltexparameteri(gl_texture_2d, gl_texture_mag_filter, gl_nearest);
+	gltexparameteri(gl_texture_2d, gl_texture_min_filter, gl_linear);
+}

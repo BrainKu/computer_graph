@@ -20,12 +20,10 @@ protected:
 private:
 public:
 	GLuint tetureName;
-	GLuint listName;
 	static int ANGLE;
 	//SolidSphere();
 	SolidSphere(float radius, unsigned int rings, unsigned int sectors);
 	void draw(GLfloat x, GLfloat y, GLfloat z);
 	void init();
-	void prepare();
 };
 #endif

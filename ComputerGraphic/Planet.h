@@ -9,8 +9,11 @@ class Planet {
 public :
 	void drawPlanet(float x, float y, float z, float size);
 	void initTexure() {};
-private:
-	static const float rotateSpeed;
+protected:
+	float rotationalSpeed;
+	float revolutionSpeed;
+	const char* filepath;
+
 	Vertex center;
 };
 

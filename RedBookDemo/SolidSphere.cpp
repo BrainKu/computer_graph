@@ -48,26 +48,6 @@ void SolidSphere::draw(GLfloat x, GLfloat y, GLfloat z)
 	if (ANGLE > 360) ANGLE -= 360;
 	glRotatef(ANGLE, 0.0, 0.8, 0.0);
 	ANGLE += 1;
-	glCallList(listName);
-	//glEnableClientState(GL_VERTEX_ARRAY);
-	//glEnableClientState(GL_NORMAL_ARRAY);
-	//glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-
-	//glVertexPointer(3, GL_FLOAT, 0, &vertices[0]);
-	//glNormalPointer(GL_FLOAT, 0, &normals[0]);
-	//glTexCoordPointer(2, GL_FLOAT, 0, &texcoords[0]);
-	//glBindTexture(GL_TEXTURE_2D, tetureName);
-	//glDrawElements(GL_QUADS, indices.size(), GL_UNSIGNED_SHORT, &indices[0]);
-	glPopMatrix();
-};
-
-void SolidSphere::init() {
-	const char* file = "others/test2.bmp";
-	Utility::loadSingleTex(tetureName, file);
-
-	listName = glGenLists(1);
-	glNewList(listName, GL_COMPILE);
-
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_NORMAL_ARRAY);
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -77,12 +57,13 @@ void SolidSphere::init() {
 	glTexCoordPointer(2, GL_FLOAT, 0, &texcoords[0]);
 	glBindTexture(GL_TEXTURE_2D, tetureName);
 	glDrawElements(GL_QUADS, indices.size(), GL_UNSIGNED_SHORT, &indices[0]);
-
-	glEndList();
+	glPopMatrix();
+	std::cout << "I'm Drawing" << std::endl;
 };
 
-void SolidSphere::prepare() {
-
-}
+void SolidSphere::init() {
+	const char* file = "others/test2.bmp";
+	Utility::loadSingleTex(tetureName, file);
+};
 
 int SolidSphere::ANGLE = 1;
