@@ -1,6 +1,9 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
 
+#define M_PI_2 1.57
+#define M_PI 3.14
+
 struct Point {
 	int x, y;
 	Point() {};

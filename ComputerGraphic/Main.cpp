@@ -4,6 +4,7 @@
 #include "Skybox.h"
 #include "SolidSphere.h"
 #include "SomePlanet.h"
+#include "Planet.h"
 
 void init();
 void display();
@@ -17,6 +18,7 @@ Camera* mCamera = new Camera(0.0, 1.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
 Skybox* skybox = new Skybox();
 //SolidSphere* sphere = new SolidSphere(2.0f, 40, 40);
 SomePlanet* somePlanet = new SomePlanet();
+Planet* aPlanet = new Planet(1.0f);
 
 int preTime = 0;
 int curTime = 0;
@@ -42,6 +44,7 @@ void init() {
 
 	skybox->initTexture();
 	somePlanet->init();
+	aPlanet->init();
 }
 
 void idleDisplay() {
@@ -75,9 +78,9 @@ void display() {
 	glLoadIdentity();
 	mCamera->setCamera();
 	//drawGrid();
-	skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
-
-	somePlanet->draw(0, 2.0, 0);
+	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
+	aPlanet->draw(0, 2.0, 0);
+	//somePlanet->draw(0, 2.0, 0);
 	glFlush();
 }
 
