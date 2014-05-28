@@ -86,7 +86,6 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Scence.cpp" />
-    <ClCompile Include="SolidSphere.cpp" />
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Skybox.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -95,12 +94,19 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Earth.h" />
+    <ClInclude Include="Jupiter.h" />
+    <ClInclude Include="Mars.h" />
+    <ClInclude Include="Mercury.h" />
+    <ClInclude Include="Neptune.h" />
     <ClInclude Include="Planet.h" />
+    <ClInclude Include="Saturn.h" />
     <ClInclude Include="Scence.h" />
     <ClInclude Include="Skybox.h" />
-    <ClInclude Include="SolidSphere.h" />
-    <ClInclude Include="SomePlanet.h" />
+    <ClInclude Include="Sun.h" />
+    <ClInclude Include="Uranus.h" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="Venus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

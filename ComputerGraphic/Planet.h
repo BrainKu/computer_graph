@@ -21,6 +21,7 @@ protected:
 	float size;
 	GLuint textureName;
 	GLuint listName;
+	Vertex position;
 	int angle;
 private:
 protected:

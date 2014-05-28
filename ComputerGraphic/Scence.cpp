@@ -1,9 +1,15 @@
 #include "Scence.h"
 
 Scence::Scence() {
-	for (int i = 0; i < 9; i++) {
-		planetList.push_back(Planet(5));
-	}
+	planetList.push_back(Sun());
+	planetList.push_back(Mercury());
+	planetList.push_back(Venus());
+	planetList.push_back(Earth());
+	planetList.push_back(Mars());
+	planetList.push_back(Jupiter());
+	planetList.push_back(Saturn());
+	planetList.push_back(Uranus());
+	planetList.push_back(Neptune());
 	mSkybox = new Skybox();
 	rotatedAngle = 0;
 }
@@ -13,10 +19,8 @@ void Scence::init() {
 	int count = 1;
 	for (i = planetList.begin(); i != planetList.end(); i++) {
 		i->init();
-		std::cout <<"count number"<< count << std::endl;
 		count++;
 	}
-
 	mSkybox->init();
 }
 
@@ -31,10 +35,13 @@ void Scence::draw(float x, float y, float z) {
 		glPushMatrix();
 		glTranslatef(x, y, z);
 		glRotatef(rotatedAngle / i->revolutionSpeed, 0, 1, 0);
-		//std::cout << "angle:" << count << std::endl;
-		i->draw(count * 10, 1, 4 * count + 20);
+		i->draw(count * 20, 1, 10 * count + 20);
 		glPopMatrix();
 		count++;
 	}
 	rotatedAngle++;
+}
+
+void Scence::addPlanets(Planet aPlanet) {
+	planetList.push_back(aPlanet);
 }

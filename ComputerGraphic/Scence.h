@@ -6,6 +6,15 @@
 #include <vector>
 #include "Planet.h"
 #include "Skybox.h"
+#include "Earth.h"
+#include "Jupiter.h"
+#include "Mars.h"
+#include "Mercury.h"
+#include "Neptune.h"
+#include "Saturn.h"
+#include "Sun.h"
+#include "Uranus.h"
+#include "Venus.h"
 
 class Scence {
 public:

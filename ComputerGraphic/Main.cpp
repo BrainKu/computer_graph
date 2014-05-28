@@ -1,10 +1,6 @@
 #include <gl/glut.h>
 #include "Camera.h"
 #include "Utility.h"
-#include "Skybox.h"
-#include "SolidSphere.h"
-#include "SomePlanet.h"
-#include "Planet.h"
 #include "Scence.h"
 
 void init();
@@ -14,9 +10,8 @@ void idleDisplay();
 
 const static int FPS = 30;
 
-Camera* mCamera = new Camera(0.0, 1.0, 4.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0);
-Skybox* skybox = new Skybox();
-Planet* aPlanet = new Planet(1.0f);
+//Camera* mCamera = new Camera(200.0, 200.0, 200.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+Camera* mCamera = new Camera(200, 200, 0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 Scence* scence = new Scence();
 
 int preTime = 0;
@@ -41,8 +36,6 @@ void init() {
 	glEnable(GL_LIGHT0);
 
 	scence->init();
-	//skybox->initTexture();
-	//aPlanet->init();
 }
 
 void idleDisplay() {
@@ -72,12 +65,9 @@ void drawGrid()
 
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 	glLoadIdentity();
 	mCamera->setCamera();
 	//drawGrid();
-	//skybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
-	//aPlanet->draw(0, 2.0, 0);
 	scence->draw(0, 0, 0);
 	glFlush();
 }
