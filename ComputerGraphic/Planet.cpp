@@ -48,6 +48,13 @@ void Planet::draw(float x, float y, float z) {
 	glPopMatrix();
 }
 
+void Planet::draw() {
+	draw(position.x, position.y, position.z);
+}
+
+Vertex Planet::getPosition() const{
+	return position;
+}
 void Planet::initSolidSphere(float radius = 2.0f, unsigned int rings = 20, unsigned int sectors = 40)
 {
 	float const R = 1. / (float)(rings - 1);

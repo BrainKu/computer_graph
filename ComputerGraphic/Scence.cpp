@@ -30,14 +30,12 @@ void Scence::draw(float x, float y, float z) {
 
 	glMatrixMode(GL_MODELVIEW);
 	std::vector<Planet>::iterator i = planetList.begin();
-	int count = 1;
 	for (; i != planetList.end(); i++) {
 		glPushMatrix();
 		glTranslatef(x, y, z);
-		glRotatef(rotatedAngle / i->revolutionSpeed, 0, 1, 0);
-		i->draw(count * 20, 1, 10 * count + 20);
+		glRotatef((GLfloat) rotatedAngle / i->revolutionSpeed, 0, 1, 0);
+		i->draw();
 		glPopMatrix();
-		count++;
 	}
 	rotatedAngle++;
 }

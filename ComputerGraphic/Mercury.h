@@ -11,6 +11,7 @@ public:
 		this->revolutionSpeed = 1.0f;
 		this->filepath = "planets/Mercury.bmp";
 		this->angle = 0;
+		this->position = Vertex(4, 4, 4);
 	};
 };
 #endif _MERCURY_H_

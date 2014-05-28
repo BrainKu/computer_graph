@@ -11,7 +11,7 @@ void idleDisplay();
 const static int FPS = 30;
 
 //Camera* mCamera = new Camera(200.0, 200.0, 200.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-Camera* mCamera = new Camera(200, 200, 0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+Camera* mCamera = new Camera(200, 200, 200, 0.0, 100.0, 0.0, 0.0, 1.0, 0.0);
 Scence* scence = new Scence();
 
 int preTime = 0;

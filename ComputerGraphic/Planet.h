@@ -12,9 +12,11 @@ class Planet {
 public :
 	Planet();
 	Planet(float size);
+	void draw();
 	void draw(float x, float y, float z);
 	void init();
 	float revolutionSpeed;
+	Vertex getPosition() const;
 protected:
 	float rotationalSpeed;
 	const char* filepath;

@@ -11,6 +11,7 @@ public:
 		this->revolutionSpeed = 1.0f;
 		this->filepath = "planets/Neptune.bmp";
 		this->angle = 0;
+		this->position = Vertex(300, 300, 300);
 	};
 };
 

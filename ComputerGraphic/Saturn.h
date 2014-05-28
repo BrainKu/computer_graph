@@ -11,6 +11,7 @@ public:
 		this->revolutionSpeed = 1.0f;
 		this->filepath = "planets/Saturn.bmp";
 		this->angle = 0;
+		this->position = Vertex(95, 95, 95);
 	};
 };
 #endif _SATURN_H_

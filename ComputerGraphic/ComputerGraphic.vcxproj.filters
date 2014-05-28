@@ -86,5 +86,8 @@
     <ClInclude Include="Sun.h">
       <Filter>头文件\Planet</Filter>
     </ClInclude>
+    <ClInclude Include="PlanetConstant.h">
+      <Filter>头文件\Planet</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
