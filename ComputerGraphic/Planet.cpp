@@ -5,7 +5,7 @@ Planet::Planet() {
 	this->angle = 0;
 	this->rotationalSpeed = 1.0f;
 	this->revolutionSpeed = 1.0f;
-	this->filepath = "planets/Uranus.bmp";
+	this->filepath = "";
 	this->position = Vertex(0, 0, 0);
 }
 
@@ -14,7 +14,7 @@ Planet::Planet(float size = 5.0f) {
 	this->angle = 0;
 	this->rotationalSpeed = 1.0f;
 	this->revolutionSpeed = 1.0f;
-	this->filepath = "planets/Uranus.bmp";
+	this->filepath = "";
 }
 
 void Planet::init() {

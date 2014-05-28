@@ -6,12 +6,11 @@
 class Mercury : public Planet{
 public:
 	Mercury() {
-		this->size = 1.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Mercury.bmp";
-		this->angle = 0;
-		this->position = Vertex(4, 4, 4);
+		this->size = PlanetConstant::PLANETSIZE[MERCURY];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[MERCURY];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[MERCURY];
+		this->filepath = PlanetConstant::FILEPATH[MERCURY];
+		this->position = PlanetConstant::POSITION[MERCURY];
 	};
 };
 #endif _MERCURY_H_

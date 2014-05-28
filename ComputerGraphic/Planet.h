@@ -7,6 +7,7 @@
 #include <vector>
 #include <gl/glut.h>
 #include "Utility.h"
+#include "PlanetConstant.h"
 
 class Planet {
 public :

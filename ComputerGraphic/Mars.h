@@ -6,12 +6,11 @@
 class Mars : public Planet{
 public:
 	Mars() {
-		this->size = 1.5f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Mars.bmp";
-		this->angle = 0;
-		this->position = Vertex(15, 15, 15);
+		this->size = PlanetConstant::PLANETSIZE[MARS];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[MARS];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[MARS];
+		this->filepath = PlanetConstant::FILEPATH[MARS];
+		this->position = PlanetConstant::POSITION[MARS];
 	};
 };
 #endif _MARS_H_

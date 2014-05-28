@@ -6,12 +6,11 @@
 class Jupiter : public Planet {
 public:
 	Jupiter() {
-		this->size = 30.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Jupiter.bmp";
-		this->angle = 0;
-		this->position = Vertex(52, 52, 52);
+		this->size = PlanetConstant::PLANETSIZE[JUPITER];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[JUPITER];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[JUPITER];
+		this->filepath = PlanetConstant::FILEPATH[JUPITER];
+		this->position = PlanetConstant::POSITION[JUPITER];
 	};
 };
 #endif _JUPITER_H_

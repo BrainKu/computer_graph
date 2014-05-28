@@ -39,6 +39,9 @@
     <ClCompile Include="Skybox.cpp">
       <Filter>源文件\Scence</Filter>
     </ClCompile>
+    <ClCompile Include="PlanetConstant.cpp">
+      <Filter>源文件\Scence</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">

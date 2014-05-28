@@ -6,12 +6,11 @@
 class Saturn : public Planet{
 public:
 	Saturn() {
-		this->size = 27.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Saturn.bmp";
-		this->angle = 0;
-		this->position = Vertex(95, 95, 95);
+		this->size = PlanetConstant::PLANETSIZE[SATURN];
+		this->filepath = PlanetConstant::FILEPATH[SATURN];
+		this->position = PlanetConstant::POSITION[SATURN];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[SATURN];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[SATURN];
 	};
 };
 #endif _SATURN_H_

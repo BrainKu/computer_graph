@@ -16,16 +16,14 @@ private:
 	int mSceneWidth;
 	Point prePosition;
 public:
+	const static float STEP_LENGTH;
 	Camera(float eyeX, float eyeY, float eyeZ, 
 		   float centerX, float centerY, float centerZ, 
 		   float upX, float upY, float upZ);
-	Vertex getEyeVertex() { return mEye; };
-	Vertex getCenterVertex() { return mCenter; };
-	Vertex getUpVertex() { return mUp; };
 	void setCamera();
 	void setCameraScreenSize(int width, int height);
 	void moveByMouseMove(int x, int y);
-	void moveByKeyPressed(UINT key, int x, int y);
+	void moveByKeyPressed(unsigned char key, int x, int y);
 	void rotateView(float x, float y, float z);
 };
 

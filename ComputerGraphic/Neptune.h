@@ -6,12 +6,11 @@
 class Neptune : public Planet {
 public:
 	Neptune() {
-		this->size = 12.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Neptune.bmp";
-		this->angle = 0;
-		this->position = Vertex(300, 300, 300);
+		this->size = PlanetConstant::PLANETSIZE[NEPTUNE];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[NEPTUNE];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[NEPTUNE];
+		this->filepath = PlanetConstant::FILEPATH[NEPTUNE];
+		this->position = PlanetConstant::POSITION[NEPTUNE];
 	};
 };
 

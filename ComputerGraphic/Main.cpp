@@ -11,7 +11,7 @@ void idleDisplay();
 const static int FPS = 30;
 
 //Camera* mCamera = new Camera(200.0, 200.0, 200.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-Camera* mCamera = new Camera(200, 200, 200, 0.0, 100.0, 0.0, 0.0, 1.0, 0.0);
+Camera* mCamera = new Camera(100, 2, 50, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 Scence* scence = new Scence();
 
 int preTime = 0;
@@ -67,7 +67,7 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 	mCamera->setCamera();
-	//drawGrid();
+	drawGrid();
 	scence->draw(0, 0, 0);
 	glFlush();
 }
@@ -77,6 +77,10 @@ void moveSenceByMouseMotion(int x, int y) {
 	glutPostRedisplay();
 }
 
+void moveScenceByKeyPressed(unsigned char key, int x, int y) {
+	mCamera->moveByKeyPressed(key, x, y);
+	glutPostRedisplay();
+}
 void reshape(int w, int h) {
 	mCamera->setCameraScreenSize(w, h);
 	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
@@ -99,6 +103,7 @@ int main(int argc, char** argv) {
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutPassiveMotionFunc(moveSenceByMouseMotion);
+	glutKeyboardFunc(moveScenceByKeyPressed);
 	glutIdleFunc(idleDisplay);
 	glutMainLoop();
 	return 0;

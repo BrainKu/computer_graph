@@ -16,10 +16,8 @@ Scence::Scence() {
 
 void Scence::init() {
 	std::vector<Planet>::iterator i;
-	int count = 1;
 	for (i = planetList.begin(); i != planetList.end(); i++) {
 		i->init();
-		count++;
 	}
 	mSkybox->init();
 }

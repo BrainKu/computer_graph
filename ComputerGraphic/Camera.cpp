@@ -19,9 +19,33 @@ void Camera::setCamera() {
 void Camera::setCameraScreenSize(int width, int height) {
 	mSceneWidth = width;
 	mSceneHeight = height;
-}
-void Camera::moveByKeyPressed(UINT key, int x, int y) {
-}
+};
+
+const float Camera::STEP_LENGTH = 1.0f;
+
+void Camera::moveByKeyPressed(unsigned char key, int x, int y) {
+	switch (key)
+	{
+	case 's':
+	case 'S':
+		mEye.z -= STEP_LENGTH;
+		break;
+	case 'w':
+	case 'W':
+		mEye.z += STEP_LENGTH;
+		break;
+	case 'a':
+	case 'A':
+		mEye.x += STEP_LENGTH;
+		break;
+	case 'd':
+	case 'D':
+		mEye.x -= STEP_LENGTH;
+		break;
+	default:
+		break;
+	}
+};
 
 void Camera::rotateView(float x, float y, float z) {
 	Vertex directionVctor = mEye - mCenter;

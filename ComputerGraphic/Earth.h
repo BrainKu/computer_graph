@@ -6,12 +6,11 @@
 class Earth : public Planet{
 public:
 	Earth() {
-		this->size = 3.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Earth.bmp";
-		this->angle = 0;
-		this->position = Vertex(10, 10, 10);
+		this->size = PlanetConstant::PLANETSIZE[EARTH];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[EARTH];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[EARTH];
+		this->filepath = PlanetConstant::FILEPATH[EARTH];
+		this->position = PlanetConstant::POSITION[EARTH];
 	};
 };
 #endif _EARTH_H_

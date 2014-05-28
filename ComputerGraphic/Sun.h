@@ -6,12 +6,11 @@
 class Sun : public Planet {
 public:
 	Sun() {
-		this->size = 50.0f;
-		this->rotationalSpeed = 0.0f;
-		this->revolutionSpeed = 0.0f;
-		this->filepath = "planets/Sun.bmp";
-		this->angle = 0;
-		this->position = Vertex(0, 0, 0);
+		this->size = PlanetConstant::PLANETSIZE[SUN];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[SUN];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[SUN];
+		this->filepath = PlanetConstant::FILEPATH[SUN];
+		this->position = PlanetConstant::POSITION[SUN];
 	};
 };
 #endif _SUN_H_

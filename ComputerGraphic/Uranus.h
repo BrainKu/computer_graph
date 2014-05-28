@@ -6,12 +6,11 @@
 class Uranus : public Planet{
 public:
 	Uranus() {
-		this->size = 12.0f;
-		this->rotationalSpeed = 1.0f;
-		this->revolutionSpeed = 1.0f;
-		this->filepath = "planets/Uranus.bmp";
-		this->angle = 0;
-		this->position = Vertex(192, 192, 192);
+		this->size = PlanetConstant::PLANETSIZE[URANUS];
+		this->rotationalSpeed = PlanetConstant::ROTATIONSPEED[URANUS];
+		this->revolutionSpeed = PlanetConstant::REVOLUTIONSPEED[URANUS];
+		this->filepath = PlanetConstant::FILEPATH[URANUS];
+		this->position = PlanetConstant::POSITION[URANUS];
 	};
 };
 #endif _URANUS_H_

@@ -85,6 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="PlanetConstant.cpp" />
     <ClCompile Include="Scence.cpp" />
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Skybox.cpp" />
