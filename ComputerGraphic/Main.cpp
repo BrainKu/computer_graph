@@ -2,6 +2,7 @@
 #include "Camera.h"
 #include "Utility.h"
 #include "Scence.h"
+#include "Light.h"
 
 void init();
 void display();
@@ -10,35 +11,28 @@ void idleDisplay();
 
 const static int FPS = 30;
 
-//Camera* mCamera = new Camera(200.0, 200.0, 200.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-Camera* mCamera = new Camera(100, 2, 50, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+Camera* mCamera = new Camera(0, 50, 50, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 Scence* scence = new Scence();
-
-int preTime = 0;
-int curTime = 0;
 
 void init() {
 	glShadeModel(GL_SMOOTH);
 	glClearColor(0.5, 0.5, 0.5, 0.0);
-	glClearDepth(1.0f);
-	glEnable(GL_DEPTH_TEST);
-	glDepthFunc(GL_LEQUAL);
 
+	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_COLOR_MATERIAL);
+	
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
-
-	GLfloat lightPosition[] = { 2.0, 3.0, 1.0, 0.0 };
-	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
-
+	
+	glClearDepth(1.0f);
+	glDepthFunc(GL_LEQUAL);
+	Light::on();
 	scence->init();
 }
 
 void idleDisplay() {
+	int preTime,curTime;
 	preTime = glutGet(GLUT_ELAPSED_TIME);
 	display();
 	curTime = glutGet(GLUT_ELAPSED_TIME);
@@ -67,8 +61,8 @@ void display() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 	mCamera->setCamera();
-	drawGrid();
 	scence->draw(0, 0, 0);
+	drawGrid();
 	glFlush();
 }
 
@@ -81,6 +75,7 @@ void moveScenceByKeyPressed(unsigned char key, int x, int y) {
 	mCamera->moveByKeyPressed(key, x, y);
 	glutPostRedisplay();
 }
+
 void reshape(int w, int h) {
 	mCamera->setCameraScreenSize(w, h);
 	glViewport(0, 0, (GLsizei)w, (GLsizei)h);

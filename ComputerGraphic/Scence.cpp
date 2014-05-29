@@ -11,7 +11,7 @@ Scence::Scence() {
 	planetList.push_back(Uranus());
 	planetList.push_back(Neptune());
 	mSkybox = new Skybox();
-	rotatedAngle = 0;
+	rotatedAngle = 0.0f;
 }
 
 void Scence::init() {
@@ -24,18 +24,17 @@ void Scence::init() {
 
 void Scence::draw(float x, float y, float z) {
 
-	mSkybox->drawSkyBox(0, 0, 0, 1000, 1000, 1000);
-
 	glMatrixMode(GL_MODELVIEW);
+	mSkybox->drawSkyBox(0, 0, -100, 40, 40, 40);
 	std::vector<Planet>::iterator i = planetList.begin();
 	for (; i != planetList.end(); i++) {
 		glPushMatrix();
 		glTranslatef(x, y, z);
-		glRotatef((GLfloat) rotatedAngle / i->revolutionSpeed, 0, 1, 0);
+		rotatedAngle += i->revolutionSpeed;
+		glRotatef(rotatedAngle, 0, 1, 0);
 		i->draw();
 		glPopMatrix();
 	}
-	rotatedAngle++;
 }
 
 void Scence::addPlanets(Planet aPlanet) {

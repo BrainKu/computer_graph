@@ -16,6 +16,7 @@ struct Vertex
 	Vertex(){};
 	Vertex(float x0, float y0, float z0) { x = x0; y = y0; z = z0; }
 	Vertex operator-(Vertex nVertex) { return Vertex(x - nVertex.x, y - nVertex.y, z - nVertex.z); }
+	Vertex operator*(float factor) { return Vertex(factor * x, factor *y, factor * z); }
 };
 
 #endif //!_COMMON_H_

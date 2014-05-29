@@ -57,8 +57,8 @@ Vertex Planet::getPosition() const{
 }
 void Planet::initSolidSphere(float radius = 2.0f, unsigned int rings = 20, unsigned int sectors = 40)
 {
-	float const R = 1. / (float)(rings - 1);
-	float const S = 1. / (float)(sectors - 1);
+	const float R = 1. / (float)(rings - 1);
+	const float S = 1. / (float)(sectors - 1);
 	unsigned int r, s;
 
 	vertices.resize(rings * sectors * 3);
@@ -68,9 +68,9 @@ void Planet::initSolidSphere(float radius = 2.0f, unsigned int rings = 20, unsig
 	std::vector<GLfloat>::iterator n = normals.begin();
 	std::vector<GLfloat>::iterator t = texcoords.begin();
 	for (r = 0; r < rings; r++) for (s = 0; s < sectors; s++) {
-		float const y = sin(-M_PI_2 + M_PI * r * R);
-		float const x = cos(2 * M_PI * s * S) * sin(M_PI * r * R);
-		float const z = sin(2 * M_PI * s * S) * sin(M_PI * r * R);
+		const float y = sin(-M_PI_2 + M_PI * r * R);
+		const float x = cos(2 * M_PI * s * S) * sin(M_PI * r * R);
+		const float z = sin(2 * M_PI * s * S) * sin(M_PI * r * R);
 
 		*t++ = s*S;
 		*t++ = r*R;
@@ -87,7 +87,7 @@ void Planet::initSolidSphere(float radius = 2.0f, unsigned int rings = 20, unsig
 	indices.resize(rings * sectors * 4);
 	std::vector<GLushort>::iterator i = indices.begin();
 	for (r = 0; r < rings - 1; r++) for (s = 0; s < sectors - 1; s++) {
-		*i++ = r * sectors + s;
+		*i++ = r * sectors + s; 
 		*i++ = r * sectors + (s + 1);
 		*i++ = (r + 1) * sectors + (s + 1);
 		*i++ = (r + 1) * sectors + s;

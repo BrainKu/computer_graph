@@ -20,12 +20,14 @@ class Scence {
 public:
 	Scence();
 	~Scence() { delete mSkybox; };
+	/* 行星和天空盒的初始化 */
 	void init();
+	/* 在给定的位置x, y ,z绘制场景*/
 	void draw(float x, float y, float z);
 	void addPlanets(Planet aPlanet);
 private:
 	Skybox* mSkybox;
 	std::vector<Planet> planetList;
-	int rotatedAngle;
+	float rotatedAngle;
 };
 #endif

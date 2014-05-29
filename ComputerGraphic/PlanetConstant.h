@@ -11,14 +11,20 @@
 #define URANUS 7
 #define NEPTUNE 8
 #define PLANETCOUNT 9
+
 #include "Common.h"
 
 class PlanetConstant {
 public:
-	const static float ROTATIONSPEED[PLANETCOUNT];
+	/* 太阳和八大行星的自转速度 */
+	const static float ROTATIONSPEED[PLANETCOUNT]; 
+	/* 太阳和八大行星的公转速度 */
 	const static float REVOLUTIONSPEED[PLANETCOUNT];
+	/* 太阳和八大行星的大小尺寸 */
 	const static float PLANETSIZE[PLANETCOUNT];
-	const static char* FILEPATH[PLANETCOUNT];
+	/* 太阳和八大行星的位置 */
 	const static Vertex POSITION[PLANETCOUNT];
+	/* 太阳和八大行星的纹理贴图的位置 */
+	const static char* FILEPATH[PLANETCOUNT];
 };
 #endif // !_PLANETCONSTANT_H_

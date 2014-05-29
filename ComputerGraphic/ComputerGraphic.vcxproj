@@ -85,6 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="PlanetConstant.cpp" />
     <ClCompile Include="Scence.cpp" />
     <ClCompile Include="Planet.cpp" />
@@ -97,6 +98,7 @@
     <ClInclude Include="Common.h" />
     <ClInclude Include="Earth.h" />
     <ClInclude Include="Jupiter.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Mars.h" />
     <ClInclude Include="Mercury.h" />
     <ClInclude Include="Neptune.h" />

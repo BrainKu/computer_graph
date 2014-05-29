@@ -13,11 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\Planet">
-      <UniqueIdentifier>{dd977375-ed3e-416b-b2d8-342541e78526}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Scence">
       <UniqueIdentifier>{cc544603-5b65-424a-94e0-e0486c91b1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Scence">
+      <UniqueIdentifier>{9d5ab619-4f31-40be-a380-7e680a3e1f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Scence\Planet">
+      <UniqueIdentifier>{dd977375-ed3e-416b-b2d8-342541e78526}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,12 +45,12 @@
     <ClCompile Include="PlanetConstant.cpp">
       <Filter>源文件\Scence</Filter>
     </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Skybox.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Utility.h">
@@ -57,40 +60,46 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Planet.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Neptune.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Earth.h">
-      <Filter>头文件\Planet</Filter>
-    </ClInclude>
-    <ClInclude Include="Scence.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Jupiter.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Mars.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Mercury.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Saturn.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Uranus.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Venus.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="Sun.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
     </ClInclude>
     <ClInclude Include="PlanetConstant.h">
-      <Filter>头文件\Planet</Filter>
+      <Filter>头文件\Scence\Planet</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>头文件\Scence</Filter>
+    </ClInclude>
+    <ClInclude Include="Scence.h">
+      <Filter>头文件\Scence</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>头文件\Scence</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

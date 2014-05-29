@@ -1,6 +1,19 @@
 #include "Skybox.h"
 #include "Utility.h"
 
+
+void Skybox::init() {
+	Utility::loadBmps2TexArray(texArray, skyFilename, SKYBOX_TEXTURE_COUNT);
+	listName = glGenLists(1);
+	glNewList(listName, GL_COMPILE);
+	drawSkyBox(0, 0, 0, 1000, 1000, 1000);
+	glEndList();
+};
+
+void Skybox::draw() {
+	glCallList(listName);
+};
+
 void Skybox::drawSkyBox(float x, float y, float z, float width, float height, float length) {
 	x = x - width / 2;
 	y = y - height / 2;
@@ -54,10 +67,6 @@ void Skybox::drawSkyBox(float x, float y, float z, float width, float height, fl
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(x + width, y, z);
 	glEnd();
 }
-
-void Skybox::init() {
-	Utility::loadBmps2TexArray(texArray, skyFilename, SKYBOX_TEXTURE_COUNT);
-};
 
 const char* Skybox::skyFilename[SKYBOX_TEXTURE_COUNT] = {
 	"universe/front.bmp",
