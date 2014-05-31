@@ -1,12 +1,14 @@
 #include "Skybox.h"
 #include "Utility.h"
-
+#include "Light.h"
 
 void Skybox::init() {
 	Utility::loadBmps2TexArray(texArray, skyFilename, SKYBOX_TEXTURE_COUNT);
 	listName = glGenLists(1);
 	glNewList(listName, GL_COMPILE);
-	drawSkyBox(0, 0, 0, 1000, 1000, 1000);
+	Light::enableMaterialEmission();
+	drawSkybox(0, 0, 0, 1000, 1000, 1000);
+	Light::disableMaterialEmission();
 	glEndList();
 };
 
@@ -14,7 +16,7 @@ void Skybox::draw() {
 	glCallList(listName);
 };
 
-void Skybox::drawSkyBox(float x, float y, float z, float width, float height, float length) {
+void Skybox::drawSkybox(float x, float y, float z, float width, float height, float length) {
 	x = x - width / 2;
 	y = y - height / 2;
 	z = z - length / 2;

@@ -5,10 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ComputerGraphic", "ComputerGraphic\ComputerGraphic.vcxproj", "{890B170A-4526-4126-9AF4-08D4EC3851CB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLDemo", "GLDemo\GLDemo.vcxproj", "{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedBookDemo", "RedBookDemo\RedBookDemo.vcxproj", "{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -23,18 +19,6 @@ Global
 		{890B170A-4526-4126-9AF4-08D4EC3851CB}.Release|Win32.ActiveCfg = Release|Win32
 		{890B170A-4526-4126-9AF4-08D4EC3851CB}.Release|Win32.Build.0 = Release|Win32
 		{890B170A-4526-4126-9AF4-08D4EC3851CB}.Release|x64.ActiveCfg = Release|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Debug|Win32.Build.0 = Debug|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Debug|x64.ActiveCfg = Debug|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Release|Win32.ActiveCfg = Release|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Release|Win32.Build.0 = Release|Win32
-		{E8BEBCEA-AD99-4F98-8F60-CDF5AF8D41E8}.Release|x64.ActiveCfg = Release|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Debug|Win32.Build.0 = Debug|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Debug|x64.ActiveCfg = Debug|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Release|Win32.ActiveCfg = Release|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Release|Win32.Build.0 = Release|Win32
-		{F2E84281-E975-4F7F-9FEA-3A06AFDB81F1}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

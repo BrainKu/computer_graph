@@ -41,8 +41,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\kuxinwei\Documents\Visual Studio 2013\Projects\ComputerGraphic\ComputerGraphic\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\kuxinwei\Documents\Visual Studio 2013\Projects\ComputerGraphic\ComputerGraphic\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

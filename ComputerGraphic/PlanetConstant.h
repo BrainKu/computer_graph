@@ -24,7 +24,7 @@ public:
 	const static float PLANETSIZE[PLANETCOUNT];
 	/* 太阳和八大行星的位置 */
 	const static Vertex POSITION[PLANETCOUNT];
-	/* 太阳和八大行星的纹理贴图的位置 */
+	/* 太阳和八大行星的纹理贴图的文件位置 */
 	const static char* FILEPATH[PLANETCOUNT];
 };
 #endif // !_PLANETCONSTANT_H_

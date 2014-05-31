@@ -1,18 +1,11 @@
 #include "Utility.h"
-#include <iostream>
 
-/************************************************************************/
-/* Load multiple BMP texture                                                                     */
-/************************************************************************/
 void Utility::loadBmps2TexArray(GLuint textureArray[], const char* fileArray[], int size) {
 	for (int i = 0; i < size; i++) {
 		loadSingleTex(textureArray[i], fileArray[i]);
 	}
 }
 
-/************************************************************************/
-/* load single BMP texture                                                                     */
-/************************************************************************/
 void Utility::loadSingleTex(GLuint& texname, const char* filename) {
 	if (NULL == filename) return;
 
@@ -29,5 +22,5 @@ void Utility::loadSingleTex(GLuint& texname, const char* filename) {
 	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, imageRec->sizeX, imageRec->sizeY, GL_RGB, GL_UNSIGNED_BYTE, imageRec->data);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	std::cout << texname << " " << filename << std::endl;
+	std::cout << "Load Texture:" << texname << " " << filename << std::endl;
 }

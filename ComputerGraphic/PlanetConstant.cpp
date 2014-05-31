@@ -2,64 +2,50 @@
 
 const float PlanetConstant::ROTATIONSPEED[PLANETCOUNT] = {
 	0.0f,
-	20.0f,
-	10.0f,
-	8.0f,
-	4.0f,
-	2.0f,
+	0.01724f,
+	0.0041f,
 	1.0f,
-	0.8f,
-	0.3f
+	0.9756f,
+	2.6667f,
+	2.4f,
+	1.4118f,
+	1.5f
 };
 
 const float PlanetConstant::REVOLUTIONSPEED[PLANETCOUNT] = {
-	//0.0f,
-	//20.0f, 
-	//10.0f,
-	//8.0f, 
-	//4.0f,
-	//2.0f, 
-	//1.0f,
-	//0.8f, 
-	//0.3f
-	//0.0f,
-	//1.0f, 1.0f,
-	//1.0f, 1.0f,
-	//1.0f, 1.0f,
-	//1.0f, 1.0f
 	0.0f,
-	0.0f,
-	0.0f,
-	0.0f,
-	0.0f,
-	0.0f,
-	0.0f,
-	0.0f,
-	0.0f
+	1.0f,
+	0.70f,
+	0.60f,
+	0.40f,
+	0.20f,
+	0.10f,
+	0.08f,
+	0.03f
 };
 
 const float PlanetConstant::PLANETSIZE[PLANETCOUNT] = {
-	20.0f,
-	1.0f,
-	3.0f,
-	3.0f,
-	1.5f,
+	50.0f,
+	5.0f,
+	9.0f,
+	9.0f,
+	7.5f,
+	35.0f,
 	30.0f,
-	27.0f,
-	12.0f,
+	13.0f,
 	12.0f
 };
 
 const Vertex PlanetConstant::POSITION[PLANETCOUNT] = {
 	Vertex(0, 0, 0),
-	Vertex(24, 0, 24),
-	Vertex(27, 0, 27),
-	Vertex(30, 0, 30),
-	Vertex(35, 0, 35),
-	Vertex(72, 0, 72),
-	Vertex(105, 0, 105),
-	Vertex(212, 0, 212),
-	Vertex(320, 0, 320)
+	Vertex(60, 0, 60),
+	Vertex(75, 0, 75),
+	Vertex(100, 0, 100),
+	Vertex(120, 0, 120),
+	Vertex(190, 0, 190),
+	Vertex(255, 0, 255),
+	Vertex(290, 0, 290),
+	Vertex(330, 0, 330)
 };
 
 const char* PlanetConstant::FILEPATH[PLANETCOUNT] = {

@@ -14,10 +14,12 @@
 
 class Skybox {
 public:
-	Skybox(){};
 	static const int SKYBOX_TEXTURE_COUNT = 6;
+	Skybox(){};
+	/* 在默认的位置绘制天空盒 */
 	void draw();
-	void drawSkyBox(float x, float y, float z, float width, float height, float length);
+	/* 在给定的位置x，y, z绘制天空盒 */
+	void drawSkybox(float x, float y, float z, float width, float height, float length);
 	void init();
 private:
 	GLuint texArray[SKYBOX_TEXTURE_COUNT];
